@@ -1,0 +1,11 @@
+framework module FBYBankCard {
+  umbrella header "FBYBankCard.h"
+
+  export *
+  module * { export * }
+}
+
+module FBYBankCard.Swift {
+    header "FBYBankCard-Swift.h"
+    requires objc
+}

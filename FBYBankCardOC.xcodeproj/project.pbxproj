@@ -15,6 +15,8 @@
 		263DB4FA23570E120013578B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263DB4F823570E120013578B /* LaunchScreen.storyboard */; };
 		263DB4FD23570E120013578B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 263DB4FC23570E120013578B /* main.m */; };
 		263DB50723570E130013578B /* FBYBankCardOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 263DB50623570E130013578B /* FBYBankCardOCTests.m */; };
+		263DB51423570EE20013578B /* ColoredCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263DB51223570EE10013578B /* ColoredCardView.swift */; };
+		26908CBA235884E40089469B /* FBYBankCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26908CB9235884E40089469B /* FBYBankCard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		263DB50223570E130013578B /* FBYBankCardOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBYBankCardOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		263DB50623570E130013578B /* FBYBankCardOCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBYBankCardOCTests.m; sourceTree = "<group>"; };
 		263DB50823570E130013578B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		263DB51123570EE00013578B /* FBYBankCardOC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBYBankCardOC-Bridging-Header.h"; sourceTree = "<group>"; };
+		263DB51223570EE10013578B /* ColoredCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredCardView.swift; sourceTree = "<group>"; };
+		26908CB9235884E40089469B /* FBYBankCard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBYBankCard.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26908CBA235884E40089469B /* FBYBankCard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +90,8 @@
 		263DB4E923570E100013578B /* FBYBankCardOC */ = {
 			isa = PBXGroup;
 			children = (
+				26908CB9235884E40089469B /* FBYBankCard.framework */,
+				263DB51223570EE10013578B /* ColoredCardView.swift */,
 				263DB4EA23570E100013578B /* AppDelegate.h */,
 				263DB4EB23570E100013578B /* AppDelegate.m */,
 				263DB4ED23570E100013578B /* SceneDelegate.h */,
@@ -95,6 +103,7 @@
 				263DB4F823570E120013578B /* LaunchScreen.storyboard */,
 				263DB4FB23570E120013578B /* Info.plist */,
 				263DB4FC23570E120013578B /* main.m */,
+				263DB51123570EE00013578B /* FBYBankCardOC-Bridging-Header.h */,
 			);
 			path = FBYBankCardOC;
 			sourceTree = "<group>";
@@ -157,6 +166,7 @@
 				TargetAttributes = {
 					263DB4E623570E100013578B = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 					263DB50123570E130013578B = {
 						CreatedOnToolsVersion = 11.1;
@@ -209,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				263DB4F223570E100013578B /* ViewController.m in Sources */,
+				263DB51423570EE20013578B /* ColoredCardView.swift in Sources */,
 				263DB4EC23570E100013578B /* AppDelegate.m in Sources */,
 				263DB4FD23570E120013578B /* main.m in Sources */,
 				263DB4EF23570E100013578B /* SceneDelegate.m in Sources */,
@@ -287,6 +298,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -345,6 +357,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -367,14 +380,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QWXF6GB4AV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FBYBankCardOC",
+				);
 				INFOPLIST_FILE = FBYBankCardOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fby.FBYBankCardOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FBYBankCardOC/FBYBankCardOC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -383,14 +407,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QWXF6GB4AV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FBYBankCardOC",
+				);
 				INFOPLIST_FILE = FBYBankCardOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fby.FBYBankCardOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FBYBankCardOC/FBYBankCardOC-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -398,6 +432,7 @@
 		263DB50F23570E130013578B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FBYBankCardOCTests/Info.plist;
@@ -417,6 +452,7 @@
 		263DB51023570E130013578B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FBYBankCardOCTests/Info.plist;
