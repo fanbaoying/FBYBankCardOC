@@ -209,7 +209,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC11FBYBankCard8CardView")
 @interface CardView : UIView
 /// Initializes and returns a newly allocated card view object with the specified frame rectangle.
-/// \param aRect The frame rectangle for the card view, measured in points.
+/// \param frame The frame rectangle for the card view, measured in points.
 ///
 ///
 /// returns:

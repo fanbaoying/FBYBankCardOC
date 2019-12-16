@@ -16,7 +16,7 @@
 		263DB4FD23570E120013578B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 263DB4FC23570E120013578B /* main.m */; };
 		263DB50723570E130013578B /* FBYBankCardOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 263DB50623570E130013578B /* FBYBankCardOCTests.m */; };
 		263DB51423570EE20013578B /* ColoredCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263DB51223570EE10013578B /* ColoredCardView.swift */; };
-		26908CBA235884E40089469B /* FBYBankCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26908CB9235884E40089469B /* FBYBankCard.framework */; };
+		2653F7A423A77D8A005F56BB /* FBYBankCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2653F7A323A77D8A005F56BB /* FBYBankCard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		263DB50823570E130013578B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		263DB51123570EE00013578B /* FBYBankCardOC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBYBankCardOC-Bridging-Header.h"; sourceTree = "<group>"; };
 		263DB51223570EE10013578B /* ColoredCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredCardView.swift; sourceTree = "<group>"; };
-		26908CB9235884E40089469B /* FBYBankCard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBYBankCard.framework; sourceTree = "<group>"; };
+		2653F7A323A77D8A005F56BB /* FBYBankCard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBYBankCard.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26908CBA235884E40089469B /* FBYBankCard.framework in Frameworks */,
+				2653F7A423A77D8A005F56BB /* FBYBankCard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 		263DB4E923570E100013578B /* FBYBankCardOC */ = {
 			isa = PBXGroup;
 			children = (
-				26908CB9235884E40089469B /* FBYBankCard.framework */,
+				2653F7A323A77D8A005F56BB /* FBYBankCard.framework */,
 				263DB51223570EE10013578B /* ColoredCardView.swift */,
 				263DB4EA23570E100013578B /* AppDelegate.h */,
 				263DB4EB23570E100013578B /* AppDelegate.m */,
@@ -161,7 +161,7 @@
 		263DB4DF23570E100013578B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = fby;
 				TargetAttributes = {
 					263DB4E623570E100013578B = {
@@ -372,6 +372,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
